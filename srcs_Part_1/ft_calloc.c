@@ -1,0 +1,11 @@
+#include "../includes/libft.h"
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	char	*mem;
+
+	if (!(mem = (char *)malloc(count * size)))
+		return (NULL);
+	ft_bzero(mem, count * size);
+	return (mem);
+}
