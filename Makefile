@@ -54,7 +54,8 @@ SRCS	=	ft_strcat.c \
 			ft_putendl.c \
 			ft_strjoin.c \
 			ft_itoa.c \
-			ft_lstnew.c \
+
+Bonus	=	ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstadd_back.c \
 			ft_lstlast.c \
@@ -64,10 +65,7 @@ SRCS	=	ft_strcat.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
 
-MAIN 	= 	main.c
-
 OBJS	=	${SRCS:.c=.o}
-
 
 CFLAGS	=	-Wall -Wextra -Werror
 
@@ -81,14 +79,18 @@ HEADER	=	-I libft.h
 ${NAME}:	${OBJS}
 			ar -rcs ${NAME} ${OBJS}
 
+bonus:
+			$(CC) $(FLAGS) -c $(SRCS) $(BONUS)
+			ar rc $(NAME) $(OBJS) $(BONUS:.c=.o)
+
 all:		${NAME}
 
 clean:	
-			${RM} ${OBJS}
+			${RM} ${OBJS} $(BONUS:.c=.o)
 
 fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
