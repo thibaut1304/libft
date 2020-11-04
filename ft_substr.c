@@ -27,10 +27,10 @@ static char		*strncpy(char *dest, const char *src, size_t n)
 	return (dest);
 }
 
-char 			*ft_substr(char const *s, unsigned int start, size_t len)
+char			*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*dest;
-	
+
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))

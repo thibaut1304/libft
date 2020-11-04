@@ -38,7 +38,6 @@ static char		*strnew(size_t size)
 	return (new);
 }
 
-
 char			*ft_strtrim(char const *s1, char const *set)
 {
 	int		min;
