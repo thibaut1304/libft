@@ -23,10 +23,10 @@ typedef struct	s_list
 }				t_list;
 
 void			ft_lstadd_front(t_list **alst, t_list *new);
-int				ft_strlen(char const *str);
+size_t			ft_strlen(char const *str);
 char			*ft_strcat(char *dest, char const *src);
 char			*ft_strcpy(char *dest, char const *src);
-char			*ft_strdup(char *src);
+char			*ft_strdup(const char *src);
 char			*ft_strncat(char *dest, char *src, unsigned int n);
 char			*ft_strncpy(char *dest, char *src, unsigned int n);
 void			*ft_memset (void *s, char c, size_t n);
@@ -46,8 +46,8 @@ void			*ft_memccpy(void *dest, void *src, int c, size_t n);
 void			*ft_memmove(void *dest, void const *src, size_t n);
 void			*ft_memchr(void *s, int c, size_t n);
 int				ft_memcmp(void const *s1, void const *s2, size_t n);
-char			*ft_strchr(char *s, int c);
-char			*ft_strrchr(char *s, int c);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(char *str, char *to_find);
 char			*ft_strnstr(char const *str, char const *to_find, size_t len);
 size_t			ft_strlcat(char *dest, char *src, size_t size);

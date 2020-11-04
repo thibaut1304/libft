@@ -91,10 +91,11 @@ HEADER	=	-I libft.h
 			gcc ${CFLAGS} -c $< -o $(<:.c=.o) ${HEADER}
 
 ${NAME}:	${OBJS}
+			gcc $(FLAGS) -c $(SRCS)
 			ar rcs ${NAME} ${OBJS}
 
 bonus:
-			$(CC) $(FLAGS) -c $(SRCS) $(BONUS)
+			gcc $(FLAGS) -c $(SRCS) $(BONUS)
 			ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 all:		${NAME}
