@@ -56,11 +56,11 @@ Total : 43/43
 
 ## Structure
 
-`typedef struct` 	`s_list`  
+`typedef struct 	s_list`  
 `{`  
-	`void` 			`*content;`  
-	`struct s_list` `*next;`  
-`}` 				`t_list;`
+`	void 			*content;`  
+`	struct s_list 	*next;`  
+`} 					t_list;`
 
 9/9
 
