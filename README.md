@@ -91,11 +91,11 @@ Total : 43/43
 - [x] ft_putstr
 - [x] ft_putendl
 - [x] ft_putnbr
-- [x] strcpy
-- [x] strncpy
-- [x] strcat
-- [x] strncat
-- [x] strstr
-- [x] strcmp
+- [x] ft_strcpy
+- [x] ft_strncpy
+- [x] ft_strcat
+- [x] ft_strncat
+- [x] ft_strstr
+- [x] ft_strcmp
 
 [Contat me](mailto:thhusser@student.42.fr)
