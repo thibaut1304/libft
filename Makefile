@@ -46,7 +46,7 @@ SRCS	=	ft_memset.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
-
+			
 BONUS	=	ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstadd_back.c \
@@ -56,10 +56,10 @@ BONUS	=	ft_lstnew.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
+			ft_strncpy.c \
 			ft_strcat.c \
 			ft_strcpy.c \
 			ft_strncat.c \
-			ft_strncpy.c \
 			ft_strcmp.c \
 			ft_strstr.c \
 			ft_memdel.c \
