@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include "libft.h"
+
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	unsigned int i;
 
