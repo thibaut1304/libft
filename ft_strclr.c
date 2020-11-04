@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void 	ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
 	int i;
 
 	i = 0;
 	if (!s)
- 		return ;
+		return ;
 	while (s[i])
 		s[i++] = 0;
 }

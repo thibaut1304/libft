@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static int 	ft_size(int n)
+static int	ft_size(int n)
 {
-	int 	i;
-	int 	neg;
+	int i;
+	int neg;
 
 	i = 0;
 	neg = 0;
@@ -34,12 +34,12 @@ static int 	ft_size(int n)
 	return (i + neg);
 }
 
-char *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	char 		*str;
-	int 		i;
-	int 		size;
-	long int 	nb;
+	char		*str;
+	int			i;
+	int			size;
+	long int	nb;
 
 	nb = n;
 	size = ft_size(nb);

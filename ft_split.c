@@ -14,13 +14,12 @@
 
 static int		is_c(char c, char charset)
 {
-
 	if (charset == c)
 		return (1);
 	return (0);
 }
 
-static char	**count_words(char const *str, char charset, char **tab)
+static char		**count_words(char const *str, char charset, char **tab)
 {
 	int i;
 	int words;
@@ -41,7 +40,7 @@ static char	**count_words(char const *str, char charset, char **tab)
 	return (tab);
 }
 
-static char	**count_letters(char const *str, char charset, char **tab)
+static char		**count_letters(char const *str, char charset, char **tab)
 {
 	int i;
 	int index;
@@ -67,7 +66,7 @@ static char	**count_letters(char const *str, char charset, char **tab)
 	return (tab);
 }
 
-static char	**split_copy(char const *str, char charset, char **tab)
+static char		**split_copy(char const *str, char charset, char **tab)
 {
 	int i;
 	int index;
@@ -91,12 +90,12 @@ static char	**split_copy(char const *str, char charset, char **tab)
 	return (tab);
 }
 
-char	**ft_split(char const *str, char charset)
+char			**ft_split(char const *str, char charset)
 {
 	char **tab;
 
 	if (!str || !charset)
- 		return (NULL);
+		return (NULL);
 	while (*str && is_c(*str, charset) == 1)
 		str++;
 	tab = NULL;

@@ -15,7 +15,7 @@
 char	*ft_strrchr(char *s, int c)
 {
 	int		i;
-	char 	car;
+	char	car;
 
 	i = 0;
 	car = (unsigned char)c;

@@ -34,5 +34,5 @@ size_t		ft_strlcpy(char *dest, char const *src, size_t size)
 		}
 		dest[j] = '\0';
 	}
-	 return (ft_strlen(src));
+	return (ft_strlen(src));
 }

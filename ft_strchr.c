@@ -14,7 +14,7 @@
 
 char	*ft_strchr(char *s, int c)
 {
-	char 	car;
+	char	car;
 
 	car = (unsigned char)c;
 	while (*s)
