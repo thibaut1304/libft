@@ -48,7 +48,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(void const *s1, void const *s2, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-char			*ft_strstr(const char *str, const char *to_find);
+char			*ft_strstr(char *str, char *to_find);
 char			*ft_strnstr(char const *str, char const *to_find, size_t len);
 size_t			ft_strlcat(char *dest, char *src, size_t size);
 void			ft_memdel(void **ap);
