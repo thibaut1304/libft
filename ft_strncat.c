@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int n)
+#include "libft.h"
+
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
