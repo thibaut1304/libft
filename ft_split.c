@@ -90,17 +90,17 @@ static char		**split_copy(char const *str, char charset, char **tab)
 	return (tab);
 }
 
-char			**ft_split(char const *str, char charset)
+char			**ft_split(char const *s, char c)
 {
 	char **tab;
 
-	if (!str || !charset)
+	if (!s || !c)
 		return (NULL);
-	while (*str && is_c(*str, charset) == 1)
-		str++;
+	while (*s && is_c(*s, c) == 1)
+		s++;
 	tab = NULL;
-	tab = count_words(str, charset, tab);
-	tab = count_letters(str, charset, tab);
-	tab = split_copy(str, charset, tab);
+	tab = count_words(s, c, tab);
+	tab = count_letters(s, c, tab);
+	tab = split_copy(s, c, tab);
 	return (tab);
 }
