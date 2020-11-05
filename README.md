@@ -1,7 +1,10 @@
 
 ![Logo Libft](https://gitlab.com/uploads/-/system/project/avatar/10815567/libft.png)
-###	Header Sublime-Text : https://github.com/kigiri/sublime-header-42.git
-###	Norminette 			: https://github.com/42Paris/norminette.git
+
+
+>	Header Sublime-Text : https://github.com/kigiri/sublime-header-42.git
+>	Norminette 			: https://github.com/42Paris/norminette.git
+
 ## Allowed Functions
 
 malloc, free, write
