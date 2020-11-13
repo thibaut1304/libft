@@ -57,6 +57,6 @@ char		*ft_itoa(int n)
 	}
 	if (n == 0)
 		str[0] = '0';
-	str[size ] = 0;
+	str[size] = 0;
 	return (str);
 }
