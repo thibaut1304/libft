@@ -34,8 +34,8 @@ static char		**count_words(char const *str, char charset, char **tab)
 		while (str[i] && is_c(str[i], charset) == 1)
 			i++;
 	}
-	if (!(tab = malloc(sizeof(char*) * words + 1)))
-		return (0);
+	if (!(tab = (char **)malloc(sizeof(char*) * words + 1)))
+		return (NULL);
 	tab[words] = 0;
 	return (tab);
 }
@@ -56,8 +56,8 @@ static char		**count_letters(char const *str, char charset, char **tab)
 			letters++;
 			i++;
 		}
-		if (!(tab[index] = malloc(sizeof(char*) * letters + 1)))
-			return (0);
+		if (!(tab[index] = (char *)malloc(sizeof(char) * letters + 1)))
+			return (NULL);
 		tab[index][letters] = 0;
 		index++;
 		while (str[i] && is_c(str[i], charset) == 1)
@@ -78,11 +78,7 @@ static char		**split_copy(char const *str, char charset, char **tab)
 	{
 		letters = 0;
 		while (str[i] && is_c(str[i], charset) == 0)
-		{
-			tab[index][letters] = str[i];
-			letters++;
-			i++;
-		}
+			tab[index][letters++] = str[i++];
 		index++;
 		while (str[i] && is_c(str[i], charset) == 1)
 			i++;
