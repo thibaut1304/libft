@@ -85,7 +85,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 RM		=	rm -f
 
-HEADER	=	-I libft.h
+HEADER	=	-I libft/libft.h
 
 .c.o:
 			gcc ${CFLAGS} -c $< -o $(<:.c=.o) ${HEADER}
