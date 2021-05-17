@@ -1,3 +1,4 @@
+![norminette](https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME_OR_FILE>/badge.svg)
 
 ![Logo Libft](https://gitlab.com/uploads/-/system/project/avatar/10815567/libft.png)
 
