@@ -1,4 +1,4 @@
-![norminette](https://github.com/thibaut1304/libft/workflows/norminette.yaml/badge.svg)
+![norminette](https://github.com/thibaut1304/libft/actions/workflows/norminette.yml/badge.svg)
 https://github.com/thibaut1304/libft/actions
 ![Logo Libft](https://gitlab.com/uploads/-/system/project/avatar/10815567/libft.png)
 
