@@ -1,5 +1,5 @@
-![norminette](https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME_OR_FILE>/badge.svg)
-
+![norminette](https://github.com/thibaut1304/libft/actions/workflows/norminette.yaml/badge.svg)
+https://github.com/thibaut1304/libft/actions
 ![Logo Libft](https://gitlab.com/uploads/-/system/project/avatar/10815567/libft.png)
 
 
