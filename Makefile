@@ -88,23 +88,23 @@ RM		=	rm -f
 HEADER	=	-I libft/libft.h
 
 .c.o:
-			gcc ${CFLAGS} -c $< -o $(<:.c=.o) ${HEADER}
+			@gcc ${CFLAGS} -c $< -o $(<:.c=.o) ${HEADER}
 
 ${NAME}:	${OBJS}
-			gcc $(FLAGS) -c $(SRCS)
-			ar rcs ${NAME} ${OBJS}
+			@gcc $(FLAGS) -c $(SRCS)
+			@ar rcs ${NAME} ${OBJS}
 
 bonus:
-			gcc $(FLAGS) -c $(SRCS) $(BONUS)
-			ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+			@gcc $(FLAGS) -c $(SRCS) $(BONUS)
+			@ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 all:		${NAME}
 
 clean:	
-			${RM} ${OBJS} $(BONUS:.c=.o)
+			@${RM} ${OBJS} $(BONUS:.c=.o)
 
 fclean:		clean
-			${RM} ${NAME}
+			@${RM} ${NAME}
 
 re:			fclean all
 
