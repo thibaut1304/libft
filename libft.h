@@ -14,7 +14,9 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
+#include <fcntl.h>
 
 typedef struct	s_list
 {
@@ -22,6 +24,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+int				get_next_line(int fd, char **line);
 void			ft_lstadd_front(t_list **alst, t_list *new);
 size_t			ft_strlen(char const *str);
 char			*ft_strcat(char *dest, const char *src);

@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/05 14:00:38 by thhusser          #+#    #+#              #
-#    Updated: 2020/11/05 14:00:38 by thhusser         ###   ########.fr        #
+#    Updated: 2021/07/24 21:38:23 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ BONUS	=	ft_lstnew.c \
 			ft_strequ.c \
 			ft_strnequ.c \
 			ft_putendl.c \
+			get_next_line.c \
 
 OBJS	=	${SRCS:.c=.o}
 
