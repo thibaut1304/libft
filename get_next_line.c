@@ -5,60 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/15 15:35:42 by thhusser          #+#    #+#             */
-/*   Updated: 2021/07/24 21:46:34 by thhusser         ###   ########.fr       */
+/*   Created: 2021/07/29 18:04:23 by thhusser          #+#    #+#             */
+/*   Updated: 2021/07/29 18:04:23 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_realloc(char *line, int *i)
-{
-	int		l;
-	char	*str;
-
-	l = 0;
-	str = malloc(sizeof(*i) * 2);
-	if (!str)
-		return (NULL);
-	*i *= 2;
-	while (line && line[l])
-	{
-		str[l] = line[l];
-		l++;
-	}
-	while (l < *i)
-	{
-		str[l] = 0;
-		l++;
-	}
-	free(line);
-	return (str);
-}
-
 int	get_next_line(int fd, char **line)
 {
-	int	r;
+	int	ret;
 	int	i;
-	int	malloc_size;
+	int	buf;
 
-	r = 1;
-	i = -1;
-	malloc_size = 50;
-	if (!line)
-		return (-1);
-	*line = NULL;
-	*line = ft_realloc(*line, &malloc_size);
-	if (!(*line))
-		return (-1);
-	while ((r = read(fd, &(*line)[++i], 1)))
+	ret = 1;
+	i = 0;
+	buf = 0;
+	*line = malloc(400000);
+	while (ret != 0 && buf != '\n')
 	{
-		if ((*line)[i] == 10)
+		ret = read(fd, &buf, 1);
+		if (ret == 0 || buf == '\n')
 			break ;
-		if (i == malloc_size - 2)
-			if (!(*line = ft_realloc(*line, &malloc_size)))
-				return (-1);
+		(*line)[i++] = buf;
 	}
-	(*line)[i] = 0;
-	return (r);
+	(*line)[i] = '\0';
+	return (ret);
 }
