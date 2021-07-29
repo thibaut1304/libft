@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 01:12:21 by thhusser          #+#    #+#             */
-/*   Updated: 2020/11/04 01:12:21 by thhusser         ###   ########.fr       */
+/*   Created: 2021/07/29 16:45:40 by thhusser          #+#    #+#             */
+/*   Updated: 2021/07/29 16:45:40 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	*ft_malloc(size_t count, size_t size)
 {
-	int	i;
+	char	*mem;
 
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
+	mem = (char *)malloc(count * size);
+	if (!mem)
+		return (NULL);
+	return (mem);
 }

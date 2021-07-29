@@ -18,7 +18,8 @@ static char	*ft_realloc(char *line, int *i)
 	char	*str;
 
 	l = 0;
-	if (!(str = malloc(*i * 2)))
+	str = malloc(sizeof(*i) * 2);
+	if (!str)
 		return (NULL);
 	*i *= 2;
 	while (line && line[l])
@@ -35,11 +36,11 @@ static char	*ft_realloc(char *line, int *i)
 	return (str);
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
-	int r;
-	int i;
-	int malloc_size;
+	int	r;
+	int	i;
+	int	malloc_size;
 
 	r = 1;
 	i = -1;
@@ -47,7 +48,8 @@ int		get_next_line(int fd, char **line)
 	if (!line)
 		return (-1);
 	*line = NULL;
-	if (!(*line = ft_realloc(*line, &malloc_size)))
+	*line = ft_realloc(*line, &malloc_size);
+	if (!(*line))
 		return (-1);
 	while ((r = read(fd, &(*line)[++i], 1)))
 	{
