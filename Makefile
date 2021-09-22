@@ -46,8 +46,7 @@ SRCS	=	ft_memset.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
-			
-BONUS	=	ft_lstnew.c \
+			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstadd_back.c \
 			ft_lstlast.c \
@@ -80,8 +79,6 @@ BONUS	=	ft_lstnew.c \
 
 OBJS	=	${SRCS:.c=.o}
 
-OBJS_BONUS	= ${BONUS:.c=.o}
-
 CFLAGS	=	-Wall -Wextra -Werror
 
 RM		=	rm -f
@@ -94,10 +91,6 @@ HEADER	=	-I libft/libft.h
 ${NAME}:	${OBJS}
 			@gcc $(FLAGS) -c $(SRCS)
 			@ar rcs ${NAME} ${OBJS}
-
-bonus:
-			@gcc $(FLAGS) -c $(SRCS) $(BONUS)
-			@ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 all:		${NAME}
 
