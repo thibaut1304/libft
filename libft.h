@@ -43,6 +43,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_isspace(const char str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, void const *src, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
