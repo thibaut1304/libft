@@ -87,6 +87,7 @@ SRCS	=	ft_memset.c \
 			get_next_line.c \
 			ft_isspace.c \
 			ft_long_atoi.c \
+			ft_is_nbr.c \
 
 OBJS	=	${SRCS:.c=.o}
 

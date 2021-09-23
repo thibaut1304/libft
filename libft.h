@@ -24,6 +24,7 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
+int			ft_is_nbr(char *str);
 long long	ft_long_atoi(const char *str);
 int			get_next_line(int fd, char **line);
 void		ft_lstadd_front(t_list **alst, t_list *new);
