@@ -14,11 +14,16 @@
 
 void	ft_print_list(t_list *list)
 {
+	char	*line;
+
+	line = NULL;
 	if (list)
 	{
 		while (list)
 		{
-			ft_putstr(ft_strdup(list->content));
+			line = ft_strdup(list->content);
+			ft_putstr(line);
+			free(line);
 			list = list->next;
 		}
 	}
