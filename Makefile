@@ -10,6 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
+_NC=`tput sgr0`
 _RED=\033[0;31m
 _GREEN=\033[0;32m
 _YELLOW=\033[0;33m
@@ -95,24 +96,24 @@ RM		=	rm -f
 HEADER	=	-I libft/libft.h
 
 .c.o:
-			@printf "$(_WHITE)Generating libft objects... %-33.33s\r" $@
+			@printf "$(_WHITE)Generating libft objects... %-33.33s\r$(_NC)" $@
 			@gcc ${CFLAGS} ${HEADER} -c $< -o $(<:.c=.o)
 
 ${NAME}:	${OBJS}
 			@echo ""
 			@gcc $(FLAGS) -c $(SRCS)
 			@ar rcs ${NAME} ${OBJS}
-			@echo "$(_GREEN)Generating $(NAME)"
+			@echo "$(_GREEN)Generating $(NAME)$(_NC)"
 
 all:		${NAME}
 
 clean:	
 			@${RM} ${OBJS}
-			@echo "$(_GREEN)Deletes objects files libft"
+			@echo "$(_GREEN)Deletes objects files libft$(_NC)"
 
 fclean:		clean
 			@${RM} ${NAME}
-			@echo "$(_GREEN)Delete $(NAME)"
+			@echo "$(_GREEN)Delete $(NAME)$(_NC)"
 
 re:			fclean all
 
