@@ -103,6 +103,7 @@ HEADER	=	-I libft/libft.h
 ${NAME}:	${OBJS}
 			@gcc $(FLAGS) -c $(SRCS)
 			@ar rcs ${NAME} ${OBJS}
+			@echo "$(_GREEN)Generating $(NAME)"
 
 all:		${NAME}
 
@@ -111,8 +112,8 @@ clean:
 			@echo "$(_GREEN)Deletes objects files"
 
 fclean:		clean
-			@echo "$(_GREEN)Delete $(NAME)"
 			@${RM} ${NAME}
+			@echo "$(_GREEN)Delete $(NAME)"
 
 re:			fclean all
 
