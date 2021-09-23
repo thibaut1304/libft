@@ -88,7 +88,8 @@ SRCS	=	ft_memset.c \
 			ft_isspace.c \
 			ft_long_atoi.c \
 			ft_is_nbr.c \
-
+			ft_print_list.c \
+			
 OBJS	=	${SRCS:.c=.o}
 
 CFLAGS	=	-Wall -Wextra -Werror
