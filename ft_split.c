@@ -38,7 +38,7 @@ static char	**count_words(char const *str, char charset, char **tab)
 		while (str[i] && str[i] == charset)
 			i++;
 	}
-	tab = malloc(sizeof(char *) * words + 1);
+	tab = malloc(sizeof(char *) * (words + 1));
 	if (!tab)
 		return (NULL);
 	tab[words] = 0;
@@ -61,7 +61,7 @@ static char	**count_letters(char const *str, char charset, char **tab)
 			letters++;
 			i++;
 		}
-		tab[index] = malloc(sizeof(char) * letters + 1);
+		tab[index] = malloc(sizeof(char) * letters);
 		if (!tab[index])
 			return (ft_free(tab, index));
 		tab[index][letters] = 0;

@@ -10,6 +10,17 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Colors
+
+_GREY=$'\x1b[30m
+_RED=$'\x1b[31m
+_GREEN=$'\x1b[32m
+_YELLOW=$'\x1b[33m
+_BLUE=$'\x1b[34m
+_PURPLE=$'\x1b[35m
+_CYAN=$'\x1b[36m
+_WHITE=$'\x1b[37m
+
 NAME	=	libft.a
 
 SRCS	=	ft_memset.c \
@@ -86,7 +97,8 @@ RM		=	rm -f
 HEADER	=	-I libft/libft.h
 
 .c.o:
-			@gcc ${CFLAGS} -c $< -o $(<:.c=.o) ${HEADER}
+			@printf "$(_WHITE)Generating libft objects... %-33.33s\r" $@
+			@gcc ${CFLAGS} ${HEADER} -c $< -o $(<:.c=.o)
 
 ${NAME}:	${OBJS}
 			@gcc $(FLAGS) -c $(SRCS)
@@ -95,9 +107,11 @@ ${NAME}:	${OBJS}
 all:		${NAME}
 
 clean:	
-			@${RM} ${OBJS} $(BONUS:.c=.o)
+			@${RM} ${OBJS}
+			@echo "$(_GREEN)Deletes objects files"
 
 fclean:		clean
+			@echo "$(_GREEN)Delete $(NAME)"
 			@${RM} ${NAME}
 
 re:			fclean all
