@@ -10,8 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Colors
-
 _GREY=$'\x1b[30m
 _RED=$'\x1b[31m
 _GREEN=$'\x1b[32m
@@ -87,6 +85,7 @@ SRCS	=	ft_memset.c \
 			ft_strnequ.c \
 			ft_putendl.c \
 			get_next_line.c \
+			ft_isspace.c \
 
 OBJS	=	${SRCS:.c=.o}
 
@@ -101,6 +100,7 @@ HEADER	=	-I libft/libft.h
 			@gcc ${CFLAGS} ${HEADER} -c $< -o $(<:.c=.o)
 
 ${NAME}:	${OBJS}
+			@echo ""
 			@gcc $(FLAGS) -c $(SRCS)
 			@ar rcs ${NAME} ${OBJS}
 			@echo "$(_GREEN)Generating $(NAME)"
@@ -109,7 +109,7 @@ all:		${NAME}
 
 clean:	
 			@${RM} ${OBJS}
-			@echo "$(_GREEN)Deletes objects files"
+			@echo "$(_GREEN)Deletes objects files libft"
 
 fclean:		clean
 			@${RM} ${NAME}
