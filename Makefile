@@ -115,8 +115,10 @@ clean:
 			@echo "$(_GREEN)Deletes objects files libft$(_NC)"
 
 fclean:		clean
-			@${RM} ${NAME}
-			@echo "$(_GREEN)Delete $(NAME)$(_NC)"
+ifneq ($(wildcard $(NAME)),)
+		@${RM} ${NAME};
+		@echo "$(_GREEN)Delete $(NAME)$(_NC)"
+endif
 
 re:			fclean all
 
