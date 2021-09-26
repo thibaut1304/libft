@@ -110,9 +110,11 @@ ${NAME}:	${OBJS}
 
 all:		${NAME}
 
-clean:	
-			@${RM} ${OBJS}
-			@echo "$(_GREEN)Deletes objects files libft$(_NC)"
+clean:
+ifneq ($(wildcard $(OBJS)),)
+		@${RM} $(OBJS);
+		@echo "$(_GREEN)Deletes objects files libft$(_NC)"
+endif
 
 fclean:		clean
 ifneq ($(wildcard $(NAME)),)
