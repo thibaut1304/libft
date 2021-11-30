@@ -6,13 +6,13 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 17:08:34 by thhusser          #+#    #+#             */
-/*   Updated: 2021/11/30 17:09:34 by thhusser         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:56:05 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	del_list(void *grid)
+void	ft_del_list(void *grid)
 {
 	free(grid);
 	grid = NULL;

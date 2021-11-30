@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 01:14:22 by thhusser          #+#    #+#             */
-/*   Updated: 2021/11/30 17:50:25 by thhusser         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:56:12 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,6 @@ void		ft_lstclear(t_list **lst, void (*del)(void*));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *),
 				void (*del)(void *));
-void		del_list(void *grid);
+void		ft_del_list(void *grid);
 
 #endif
