@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/05 14:00:38 by thhusser          #+#    #+#              #
-#    Updated: 2021/11/30 17:49:45 by thhusser         ###   ########.fr        #
+#    Updated: 2021/12/07 16:19:22 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,8 @@ SRCS	=	ft_memset.c \
 			ft_is_nbr.c \
 			ft_print_list.c \
 			ft_del_list.c \
-			
+			ft_split_charset.c \
+
 OBJS	=	${SRCS:.c=.o}
 
 CFLAGS	=	-Wall -Wextra -Werror
